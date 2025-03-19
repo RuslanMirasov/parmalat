@@ -1,0 +1,23 @@
+.grid {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  li {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.col--3 {
+    li {
+      width: calc((100% - 20px) / 3);
+    }
+  }
+
+  &.col--2 {
+    li {
+      width: calc((100% - 10px) / 2);
+    }
+  }
+}

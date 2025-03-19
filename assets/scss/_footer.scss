@@ -1,0 +1,41 @@
+.footer {
+  font-display: block;
+  width: 100%;
+  padding: 80px 0px 180px 0px;
+  .logo {
+    display: block;
+    margin: 0;
+    width: 152px;
+  }
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1440px;
+  padding: 0px 40px;
+  margin: 0 auto;
+  gap: 30px;
+  li {
+    width: auto;
+    max-width: 300px;
+    min-width: 220px;
+    font-size: 20px;
+    line-height: 1.1;
+    address,
+    span {
+      display: block;
+      color: #8fa3bf;
+    }
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      transition: 0.3s;
+      &:hover {
+        color: var(--sea-color);
+      }
+    }
+  }
+}

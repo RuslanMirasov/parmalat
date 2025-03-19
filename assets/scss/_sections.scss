@@ -1,0 +1,402 @@
+.main {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 0px 0px 80px 80px;
+}
+
+.section {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+
+  max-width: 1440px;
+  padding: 0px 40px;
+}
+
+// -------------------------- HERO
+#hero {
+  padding-top: 56px;
+}
+
+.hero__headline {
+  display: inline-block;
+  position: relative;
+  font-family: var(--regular);
+  font-size: 57.5px;
+  line-height: auto;
+  padding: 12px 94px 12px 20px;
+  top: -85px;
+  span {
+    position: relative;
+    z-index: 2;
+    color: var(--primary-color);
+    span {
+      font-size: 35px;
+      padding-left: 20px;
+      font-family: var(--semibold);
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 0px 80px 80px 0px;
+    background: linear-gradient(6deg, rgba(136, 187, 208, 1) 28%, rgba(255, 255, 255, 1) 68%);
+    z-index: 0;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50vw;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    border-radius: 0px 80px 80px 0px;
+    background: #aee1ee url('../img/vawes/hero_vawe.svg') no-repeat right center/auto 100%;
+    z-index: 1;
+  }
+}
+
+.hero-image {
+  display: block;
+  position: relative;
+}
+
+.hero_product_image {
+  position: absolute;
+  right: 6%;
+  bottom: -10%;
+  height: 68.4%;
+}
+
+//-----------------------------ABOUT US
+
+#about {
+  padding-top: 70px;
+  padding-bottom: 200px;
+  .grid {
+    margin-top: 100px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -120px;
+      top: -90px;
+      width: 392px;
+      height: 434px;
+      background: url('../img/aboutus.webp') no-repeat center center/cover;
+      z-index: 0;
+    }
+  }
+  .about-cart {
+    min-height: 470px;
+  }
+}
+
+.about-cart {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: var(--blue-color);
+  color: var(--primary-color);
+  padding: 40px;
+  gap: 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+
+  > * {
+    z-index: 1;
+  }
+  .title {
+    margin-bottom: auto;
+    transition: color 0.3s;
+  }
+  .about-cart__image {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    z-index: 0;
+    img {
+      height: 100%;
+    }
+  }
+
+  p {
+    letter-spacing: -0.7px;
+    padding-right: 20px;
+  }
+}
+
+// -------------------- EXPERTS
+
+#experts {
+  padding: 6vw 0px 250px 0px;
+  margin-top: -80px;
+  background: url('../img/vawes/expert_vawe.svg') no-repeat top center/100% auto;
+}
+
+.expert-cart {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 840px;
+  color: var(--primary-color);
+}
+
+.expert-cart__image {
+  width: 175px;
+  height: 175px;
+  border-radius: 175px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.regalia {
+  span {
+    display: block;
+    width: 100%;
+  }
+}
+
+// -------------------- WHY US
+
+#whyus {
+  padding: 10vw 0px 300px 0px;
+  margin-top: -150px;
+  background: url('../img/vawes/whyus_vawe.svg') no-repeat top center/100% auto;
+  color: var(--primary-color);
+  .container > .title {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .grid {
+    margin-top: 50px;
+  }
+
+  .about-cart {
+    min-height: 310px;
+    p {
+      color: var(--white);
+      position: relative;
+      transform: translate(0px, 10px);
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .about-cart__image {
+      transition: 0.3s;
+      opacity: 1;
+    }
+    .title {
+      max-width: 50%;
+    }
+    &:hover {
+      background: var(--sea-color);
+      color: var(--white);
+      .about-cart__image {
+        opacity: 0;
+      }
+      p {
+        opacity: 1;
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+}
+
+// -------------------- WHY US
+
+#products {
+  padding: 10vw 0px 300px 0px;
+  margin-top: -150px;
+  background: url('../img/vawes/products_vawe.svg') no-repeat top center/100% auto;
+  color: var(--white);
+  min-height: 900px;
+  .container > .title {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+// -------------------- QUESTION TO EXPERT
+
+#question {
+  padding: 13vw 0px 300px 0px;
+  margin-top: -150px;
+  background: url('../img/vawes/question_vawe.svg') no-repeat top center/100% auto;
+  min-height: 900px;
+  .container > .title {
+    text-align: center;
+    margin: 0 auto;
+    color: var(--primary-color);
+  }
+  .grid {
+    margin-top: 60px;
+  }
+  .about-cart {
+    background-color: var(--sea-color);
+    color: var(--white);
+    min-height: 470px;
+    > .title {
+      max-width: 50%;
+    }
+    .about-cart__image {
+      max-height: 70%;
+    }
+  }
+}
+
+// -------------------- YOUSELF
+
+#youself {
+  padding: 10vw 0px 300px 0px;
+  margin-top: -150px;
+  background: url('../img/vawes/youself_vawe.svg') no-repeat top center/100% auto;
+  min-height: 900px;
+  .container > .title-box {
+    text-align: center;
+    max-width: 710px;
+    margin: 0 auto;
+    color: var(--primary-color);
+  }
+}
+
+.swiper--youself {
+  margin-top: 40px;
+  color: var(--primary-color);
+}
+// -------------------- INFORMATION
+
+#information {
+  padding: 10vw 0px 0px 0px;
+  margin-top: -150px;
+  background: url('../img/vawes/information_vawe.svg') no-repeat top center/100% auto;
+  .container > .title {
+    text-align: center;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    left: 0px;
+    bottom: 0px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(252, 252, 252, 0) 40%);
+  }
+}
+
+.information__bg-image {
+  position: absolute;
+  height: 65%;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.information {
+  margin-top: 64px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 60px;
+  padding-bottom: 144px;
+  li {
+    width: calc((100% - 60px) / 2);
+    &:nth-child(1) {
+      .information__item {
+        max-width: 438px;
+      }
+    }
+    &:nth-child(2) {
+      .information__item {
+        margin-left: auto;
+        margin-top: 10px;
+        img {
+          right: auto;
+          left: -40px;
+          top: -50px;
+        }
+      }
+    }
+    &:nth-child(3) {
+      .information__item {
+        margin: 0 auto;
+        img {
+          right: auto;
+          left: -40px;
+          top: -60px;
+        }
+      }
+    }
+    &:nth-child(4) {
+      .information__item {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.information__item {
+  position: relative;
+  color: var(--primary-color);
+  background: linear-gradient(45deg, rgba(136, 187, 208, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  padding: 50px;
+  border-radius: 50px;
+  width: 100%;
+
+  max-width: 415px;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 45px;
+    background-color: var(--blue-color);
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  img {
+    width: 108px;
+    position: absolute;
+    right: -40px;
+    top: -30px;
+  }
+}

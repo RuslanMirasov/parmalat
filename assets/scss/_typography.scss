@@ -1,0 +1,46 @@
+.title-box {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  display: block;
+
+  &.title--h1 {
+    font-size: 60px;
+    line-height: 1.1;
+  }
+
+  &.title--h2 {
+    font-size: 60px;
+    line-height: 1.1;
+  }
+
+  &.title--h3 {
+    font-size: 35px;
+    line-height: 1.1;
+  }
+
+  &.title--h4 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  &.title--h5 {
+    font-size: 25px;
+    line-height: 1.1;
+    letter-spacing: -0.7px;
+  }
+
+  &.title--h6 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.subtitle {
+  font-size: 30px;
+  line-height: 1.3;
+}

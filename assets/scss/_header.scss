@@ -1,0 +1,37 @@
+.header {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 24px 45px;
+  border-radius: 45px;
+  background-color: var(--white);
+  z-index: 10;
+  overflow: hidden;
+  max-width: calc(100% - 80px);
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+}
+
+.navigation__menu {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  a {
+    font-family: var(--semibold);
+    color: var(--primary-color);
+    font-size: 18px;
+    line-height: auto;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: 0.3s;
+    &:hover {
+      color: var(--sea-color);
+    }
+  }
+}
