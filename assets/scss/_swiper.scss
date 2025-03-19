@@ -37,6 +37,7 @@
     background: var(--primary-color);
   }
   svg {
+    transition: 0.3s;
     width: 26px;
     fill: var(--white);
   }

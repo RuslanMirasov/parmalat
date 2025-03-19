@@ -1,8 +1,8 @@
 .button {
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 50px;
   font-size: 20px;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   line-height: auto;
   font-family: var(--regular);
   color: var(--white);
@@ -10,6 +10,15 @@
   transition: 0.3s;
   &:hover {
     background-color: var(--sea-color);
+  }
+
+  &.button--white {
+    background-color: var(--white);
+    color: var(--primary-color);
+    &:hover {
+      background-color: var(--sea-color);
+      color: var(--white);
+    }
   }
 }
 

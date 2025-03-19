@@ -145,7 +145,7 @@
   }
 
   p {
-    letter-spacing: -0.7px;
+    letter-spacing: -0.03em;
     padding-right: 20px;
   }
 }
@@ -255,7 +255,7 @@
   }
 }
 
-// -------------------- WHY US
+// -------------------- PRODUCTS
 
 #products {
   padding: 10vw 0px 300px 0px;
@@ -266,6 +266,95 @@
   .container > .title {
     text-align: center;
     margin: 0 auto;
+  }
+}
+
+.swiper--products {
+  margin-top: 176px;
+  .arrow {
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover {
+      background-color: var(--sea-color);
+    }
+  }
+  .swiper-slide {
+    width: 518px;
+    min-height: 518px;
+    transition: transform 0.6s, opacity 0.6s;
+    opacity: 0;
+    transform: scale(0.8) translate(0px, 0px);
+    z-index: 1;
+    &.swiper-slide-active,
+    &.swiper-slide-next,
+    &.swiper-slide-prev {
+      opacity: 1;
+    }
+    &.swiper-slide-next {
+      transform: scale(0.8) translate(-100px, 0px);
+    }
+    &.swiper-slide-prev {
+      transform: scale(0.8) translate(100px, 0px);
+    }
+    &.swiper-slide-active {
+      z-index: 2;
+      transform: scale(1) translate(0px, 0px);
+      .button {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .product-cart__image {
+        margin: -150px 0px 35px 0px;
+      }
+    }
+  }
+}
+
+.product-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 50px;
+  padding: 50px;
+  transition: background-color 0.6s;
+  text-align: center;
+
+  .button {
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(0%, 50%);
+  }
+}
+
+.product-cart__info {
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.3s;
+  .title {
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 35px;
+    letter-spacing: -0.03em;
+  }
+}
+
+.product-cart__image {
+  display: flex;
+  width: 100%;
+  height: 388px;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  margin: 0px 0px 0px 0px;
+  transition: margin 0.3s;
+  img {
+    max-height: 100%;
   }
 }
 
@@ -357,7 +446,7 @@
     transition: height 0.3s;
     p,
     b {
-      letter-spacing: -0.8px;
+      letter-spacing: -0.04em;
     }
     ul {
       display: flex;
