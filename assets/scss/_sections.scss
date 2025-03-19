@@ -153,9 +153,24 @@
 // -------------------- EXPERTS
 
 #experts {
-  padding: 6vw 0px 250px 0px;
+  padding: 6vw 0px 230px 0px;
   margin-top: -80px;
   background: url('../img/vawes/expert_vawe.svg') no-repeat top center/100% auto;
+}
+
+.swiper-button-prev.arrow.experts-prev,
+.swiper-button-next.arrow.experts-next {
+  margin-top: 50px;
+  background: rgba(0, 46, 109, 0.1);
+  svg {
+    fill: var(--primary-color);
+  }
+  &:hover {
+    background: rgba(0, 46, 109, 1);
+    svg {
+      fill: var(--white);
+    }
+  }
 }
 
 .expert-cart {
@@ -163,6 +178,14 @@
   margin: 0 auto;
   max-width: 840px;
   color: var(--primary-color);
+  transition: opacity 0.6s;
+  opacity: 0;
+}
+
+.swiper-slide-active {
+  .expert-cart {
+    opacity: 1;
+  }
 }
 
 .expert-cart__image {
@@ -293,6 +316,91 @@
   margin-top: 40px;
   color: var(--primary-color);
 }
+
+.youself-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 44px;
+  padding: 30px;
+  background-color: var(--white);
+  transition: 0.6s;
+  opacity: 0;
+  transform: scale(0.8);
+
+  picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 87%;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 30px;
+    margin-bottom: 45px;
+    transition: padding-top 0.3s, margin-bottom 0.3s;
+    img {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .youself-card__info {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 0px;
+    flex-direction: column;
+    gap: 15px;
+    transition: height 0.3s;
+    p,
+    b {
+      letter-spacing: -0.8px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        background-color: var(--sea-color);
+        color: var(--white);
+        padding: 18px 30px;
+        border-radius: 20px;
+      }
+    }
+  }
+  .button {
+    margin-top: 15px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(0px, -10px);
+  }
+  .title {
+    margin-bottom: 15px;
+  }
+}
+
+.swiper-slide-active {
+  .youself-card {
+    transform: scale(1);
+    .button {
+      pointer-events: all;
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
+}
+
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+  .youself-card {
+    opacity: 1;
+  }
+}
+
 // -------------------- INFORMATION
 
 #information {
